@@ -1,0 +1,88 @@
+<!DOCTYPE html>      <!--it tells the browser what type of doc it is--> 
+<html lang="en">     <!--opening tag of html; html is an element-->
+                     <!--lang is an attribute  //we can have multiple blocks for different language-->
+<head>               <!--inside html block we can create head and body element ; here is the opening tag for head-->
+                     <!--head block contains anything which triggers some logics ; it has details about webpage such as title etc-->
+    <meta charset="UTF-8">   <!--it is metadata ; it tells about the characterset of the page ; UTF8 is most common-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Demo Title</title>  <!--it adds a title to the webpage--> 
+</head>              <!--closing tag for head-->
+<body>               <!--opening tag for body  //everything written in body is visible on the viewport of the browser-->
+    <h1> Heading 1</h1>  <!--it adds heading to the webpage ; h1 is the most bold and bigger in size-->
+    normal text 
+    <h2> Heading 2</h2>
+    <h6> Heading 6</h6>  <!--h6 is quite smaller as compared to h1-->
+    <p> Here is a para </p>  <!--It is used to add para-->
+                             <!--p tag is a block element ; it will take one whole line even if text is less ; inline element doesn't take whole line like 'i'-->
+    it is not printed   <!--even if we write text in another line, it will be printed in the same line-->
+    in another line
+    <br>                <!--br tag is used to leave a line or print from next line ; br is a single sidded tag--> 
+    it is printed 
+    <br> in another line <br>
+    <i> this is italic text</i> <br>  <!--i is used to write text in italics-->
+    <b>this is bold text</b>  <br>    <!--b is used to write text in bold letter-->
+    <u>it is underlined</u>  <br>     <!--u is used to underline text-->
+    <s>it is strikethrough</s> <br>   <!--s is used to strikethrough text-->
+    <ul>                    <!--this is an unordered list ; unordered list is shown in bullet points -->
+        <li>first</li>      <!--li element is used to add points to unordered list-->
+        <li>second</li>
+        <li>third</li>
+    </ul>
+    <!--we can change the shape of point by adding type-->
+    <ul type="square">      <!--this is an unordered list with square points -->
+        <li>one</li>        
+        <li>two</li>
+    </ul>
+    <ul type="circle">      <!--this is an unordered list with circle points -->
+        <li>one</li>        
+        <li>two</li>
+    </ul>
+    <ol>                    <!--this is an unordered list ; unordered list is shown in numeric points -->
+        <li>one</li>        <!--li element is used to add points to ordered list-->
+        <li>two</li>
+        <li>three</li>
+    </ol>
+    <!--we can also change the shape of point in ordered list by adding type-->
+    <ol type="A">      <!--this is an ordered list with points starting with uppercase letters-->
+        <li>one</li>        
+        <li>two</li>
+    </ol>
+    <ol type="a" start="4">      <!--this is an ordered list with points starting with fourth letter in lowercase-->
+        <li>one</li>        
+        <li>two</li>
+    </ol>
+    <!--for roman numeral list use 'i' or 'I'-->
+    <!--here is how to create a nested list-->
+    <ul>
+        <li> item 1                           <!--add another ordered or unordered list before adding the closing tag for li element-->
+            <ul>
+                <li>item 1.1</li>
+                <li>item 1.2
+                    <ol>                      <!--we can ordered list within unordered list and vice versa-->
+                        <li>item 1.1.1</li>
+                        <li>item 1.1.2</li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    <table align="center" border="1" cellspacing="10" cellpadding="10">        <!--table tag is used to create a table-->
+        <!--align will align the whole table to the center of page ; border will add  border to the table ; cellspacing is used to add space between the cells ; cellpadding is used to add padding to cells -->
+        <tr>       <!--tr tag is used to create a row in the table-->
+            <td>january</td>     <!--td tag is used to create a cell in a row-->
+            <td>february</td>   
+        </tr>
+        <tr>
+            <td colspan="2">march</td>  <!--colspan 2 is used to take space of two columns-->
+            <td rowspan="2">april</td>  <!--rowspan 2 is used to take space of two rows-->
+        </tr>
+        <tr>
+            <td align="center">may</td> <!--align here will align the text in the cell to the center--> 
+            <td>june</td>
+        </tr>
+    </table>
+
+    <div>This is a Div</div>   <!--The div tag defines a division or a section in an HTML document ; It is easily styled by using CSS -->
+</body>              <!--closing tag for body-->
+</html>              <!--closing tag for html  //webpage ends here-->
