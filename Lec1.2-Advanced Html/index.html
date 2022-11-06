@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Anchor Links</h2>
+    <a href="https://www.google.com">Go to Google</a> <!--a tab (anchor) is used to add links to page ; we can write any link after 'href=' and text for that link can be written beofre closing tag-->
+    <br>
+    <a href="./inner-links.html">Inner Links</a> <br>     <!--inner links can also be used to link some different html file in same folder-->
+    <a href="https://www.google.com" target="_blank">Open site in new tab</a>  <!--target attribute is used to change the behavior of a link. For example: "_blank" will open the link in the new tab ; there any other targets, go to https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/target-->
+
+    <!--We can create contents tab and link it to different paragraphs using 'a' attribute and linking it to different IDs using hashtag-->
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#p1">First Para</a></li>
+        <li><a href="#p2">Second Para</a></li>
+        <li><a href="#p3">Third Para</a></li>
+    </ul>
+    <h4 id="p1">First Para</h4>
+    <p>Here is the first para</p>
+    <h4 id="p2">Second Para</h4>
+    <p>Here is the second para</p>
+    <h4 id="p3">Third Para</h4>
+    <p>Here is the third para</p>
+
+    <!--iframes is used to add other html pages content to current html page-->
+    <h1> iframes </h1>  
+    <iframe height="400" width="400" src="./inner-links.html"></iframe>  <!--we have to provide height and width of the content box and also the source of html page after 'src=' ; by default it is shown with border but border can be removed using frameborder="0"-->
+    <iframe height="400" width="400" src="https://aka-kush.github.io/"></iframe>
+
+    <!--we can also add inner-links and make it open in some iframe using name attribute ; for ex:-->
+    <ul>
+        <li><a href="./inner-links.html" target="frame1">Inner Links</a></li>
+        <li><a href="./index.html" target="frame2">Index</a></li>
+    </ul>
+    <iframe name="frame1" height="400" width="400"> </iframe>
+    <iframe name="frame2" height="400" width="400"> </iframe> <br>
+
+    <!--as google doesn't allow its site to be opened in an iframe, we can open it in a parent target which will open the site in the parent tab i.e. wherever it is called by using _parent or we can also open it in the whole curent tab suing_self ; for nested iframe, parent of iframe4 will be iframe3 ; for deeply nested iframe we can use _top to open it in the topmost iframe-->
+    <a href="https://youtu.be/r_0JjYUe5jo" target="em" >Eminem Godzilla</a>
+    <iframe name="em" frameborder="1" height="600" width="000"></iframe>
+
+    <!--how to embedd media to webpage-->
+    <h2>Image of Eminem</h2>
+    <img src="media/image.jpg" height="400" width="400" alt="Photo - Eminem"> <!--we need to specify type of file like img,video & audio, we can also specify heigh width ; we need to specify location of image using src ; then we write an alternative text which will be displayed in the case of image doesn't load or can be accessed by screenreader-->
+    <h2>Eminem - Darkness (Audio)</h2>
+    <audio controls src="media/audio.mp3"></audio>
+    <h2>Eminem Godzilla (Video)</h2>
+    <video controls loop preload="metadata" src="media/video.mp4" height="400" width="400" alt="Video - Eminem"></video>  <!--by default control buttons for videos is not displayed therefore 'controls' attribute is used to add video controls-->
+    <!--autoplay attribute can be used to autoplay video but it is blocked by default in many browsers ; loop attribute can be used to loop video whenever video ends ; preload attribute is used to preload 'metadata' so that info like length of the video is displayed even if we don't play the video or 'none' which doesn't load anything until&unless the video is played-->
+    
+    <!--in order take input from user, 'input' tag can be used ; it will be discussed later in deatil-->
+    <h4>Enter your details : </h4>
+    <input type="text"> <br>       <!--by default type of input is text-->
+    <input type="password"> <br>   <!--password type will show dots instead of actuall text written-->
+    <input type="email">  <br>     <!--in order to validate format of email id, email type can be used-->   
+    <input type="number">  <br>    <!--in order to validate that the input is a numeric value, number type can be used-->
+    <input type="number" min=30 max=100>  <br>  <!--using min max will make sure that input is between the given parameters-->
+    <input type="date">  <br>      <!--in order to input date, date type can be used-->
+    <input type="color">  <br>     <!--in order to input color, color type can be used-->
+    <input type="file">  <br>      <!--in order to file input, file type can be used-->
+    <input type="checkbox">A       <!--checkbox type can be used to take multiple inputs-->
+    <input type="checkbox">B
+    <input type="checkbox">C  <br>
+    <input name="options" type="radio">A          <!--radio type can be used to take one input out of many ; name attribute is mandatory in order to take only one input-->
+    <input name="options" type="radio">B          <!--after '>' we can write anything and it is displayed with the input space-->
+    <input name="options" type="radio">C  <br>
+    <!--in order to select the option if the text is selected then we can use the attribute called label-->
+    <input id="a" name="check" type="checkbox"> <label for="a">A</label>  <!--we will give an id and label that id with our text using label attribute-->
+    <input id="b" name="check" type="checkbox"> <label for="b">B</label>
+    <input id="c" name="check" type="checkbox"> <label for="c">C</label>  <br>
+
+    <textarea>Write something here...</textarea>  <br>  <!--textarea tag is used to get an area to write text on our page ; it can be increased or decreased in size ; it has a closing tag ; writing something before closing tag is shown as default-->
+                                                        <!--we can also set initial size of text area using 'cols' and 'rows' attribute-->
+    <select>                                      <!--select tag is used to get a drop down menu with options-->
+        <option>Option 1</option>                 <!--option tag is used to add options to drop down menu-->
+        <option>Option 2</option>                 
+        <option>Option 3</option>
+    </select>  <br>
+
+    <select multiple>                             <!--in order to select multimple options from menu, we can use select tag with 'multiple' attribute like: '<select multiple> ; user can select multiple options by pressing shift/ctrl key-->
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+    </select>  <br>
+
+    <!--in order to create a basic form layout, form tag can be used-->
+    <h1>Form</h1>  <br>
+    <form action="https://www.google.com/search">      <!--within form tag we use an attribute action which gives an action like what to do ; for ex in our form it will search entered text on Google-->
+        <input name="q">                   <!--we created an input tag and named it 'q' so that user can write what to search for and it will be searched on google-->
+        <button type="submit">Search</button>   <!--button tag is used to create a button ; here button type is submit which means whatever is entered will be submitted to Google.com when enter or search option is pressed ; Anything written before closing button will be used as a button for performing the action-->
+        <button type="reset">❌</button>    <!--type reset can be used to create a clear button-->
+    </form>  <br>
+</body>
+</html>
