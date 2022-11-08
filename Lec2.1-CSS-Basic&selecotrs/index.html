@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <!--styling of html document can be done in three ways:-->
+    <!--First: Creating a style tag and use css in it-->
+    <!-- <style>     /*style tag is used to style documents ; CSS is used in style tag*/
+        div{
+            color: red;      /*what this is basically does is chabge the color os body of 'div' tag to red*/
+            font-size: 30px;   /*channges the font size of div*/
+        }
+        p{
+            background-color: yellow;  /*it will change the color of whole block of p*/
+        }
+    </style>     -->
+
+    <!--Second: Using style attribute within tags-->
+    <!-- <p style="font-size: 14pt;" >
+        this is a para with styling
+    </p> -->
+
+    <!--Third: Create a .css file and link it to Html doc-->
+    <link rel="stylesheet" href="style.css">  <!--here rel means the relation of the file linking with doc i.e. stylesheet here ; href is used to link the css file-->
+
+    
+</head>
+<body>
+    <!--by default styling is applied to every div and p tag ; in order to apply seperate styling for every tag "selectors" are used-->
+    <div class="big">This is a div </div>   <!--class selector ; refer to css file-->
+    <div class="bold">This is a div </div>
+    <div class="big">This is a div </div>
+    <p id="one">This is a paragraph</p>     <!--id selector ; refer to css file-->
+    <p id="two">This is a paragraph</p>
+    <p id="three">This is a paragraph</p>
+    <input type="number" value="type here...">
+    <input disabled type="text" value="can't type here">   <!--attribute selector ; refer to css file-->
+
+    <!--creating a box using padding margin etc.-->
+    <div class="box" id="div1">
+        one
+        <div class="box" id="div2">
+            two
+            <div class="box" id="div3">
+                three
+            </div>
+        </div>
+    </div>
+
+    <ul id="list1">
+        <li>1</li> 
+        <ul>
+            <li>1.1</li>
+            <li>1.2</li>
+        </ul>
+        
+        
+        <li>2</li>
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+                <li>2.3</li>
+            </ul>
+        
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+/*selectors are used to add styling to some particular tags*/
+
+
+div{
+    color: red;      /*what this is basically does is chabge the color os body of 'div' tag to red*/
+    font-size: 30px;   /*channges the font size of div*/
+}
+
+p{
+    background-color: yellow;  /*it will change the color of whole block of p*/
+    border: 1px solid black;   /*Adds border to p tag*/
+}
+
+* {                           /* '*' is a wildcard selector (universal) ; it applies styling to whole doc */
+    font-style: italic;
+}
+
+.big {                     /*this is a class selector ; it applies styling to only those tags with this class*/
+    font-size: 45pt;
+}                          /*a decimal is used before class*/
+
+.bold{
+    font-weight: bold;
+}
+
+#one{                      /*this is id selector ; it applies styling to only those tags with this id*/
+    font-size: 34pt;
+}
+
+#two{                      /* a hashtag is used before id*/
+    background-color: orange;
+}
+
+#three{
+    padding-left: 5cm;     /*adds padding to the left*/
+}
+
+input[disabled]{           /*attribute selector is used to add styling to those tags with some attribute ; for ex here we applied styling to input tag with 'disabled' attribute*/
+    height: 300px;
+    width: 300px;
+}
+
+input[ type= "number"]{
+    height: 50px;
+    width: 50px;
+}
+
+
+.box{
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#div1{
+    background-color: lightgreen;
+}
+#div2{
+    background-color: lightsalmon;
+}
+#div3{
+    background-color: lightcyan;
+}
