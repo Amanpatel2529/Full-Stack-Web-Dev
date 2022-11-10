@@ -1,0 +1,27 @@
+/*Combinators are used to style elements based on their position on screen*/
+
+/*Adjacent Sibling Combinator ; second element after + gets styling and both share the same parent*/
+/*First p after h2 is affected*/
+/* A + B */
+h2 + p{                 /*It applies styling to para that comes after h2*/
+    font-size: 35px;
+}
+
+/*General Sibling Combinator ; every element after ~ gets styling and share the same parent*/
+/*Every p after h3 is affected*/
+/* A ~ B */
+h3 ~ p{
+    background-color: orange;
+}
+
+/*Child Combinator ; it will affect direct childen of first element only*/
+/* A > B */
+section > p{
+    font-size: 40pt;
+}
+
+/*Descendant Combinator ; it select nodes that are descendant to first element*/
+/* A B */
+section p{
+    font-family: monospace;
+}
