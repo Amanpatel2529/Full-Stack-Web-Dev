@@ -1,0 +1,29 @@
+/*Pseudo Selector is adding styling to selector of some tag*/
+
+.box{
+    height: 80px;
+    width: 80px;
+    background-color: orange;
+    padding: 10px;
+    color: black;
+}
+
+/*Pseudo classes are applied to these selectors*/
+/*Hover is a pseudo class ; It changes style when we hover mouse over it*/ 
+.box:hover{
+    background-color: forestgreen;
+    color: ghostwhite;
+}
+
+/*Active is a pseudo class ; It changes style when we click over it*/ 
+.box:active{
+    height: 120px;
+    width: 120px;
+    background-color: orange;
+    font-size: 37px;
+}
+
+/*Focus psuedo class is especially for input ; it changes the styling once we click to edit*/
+input:focus{
+    font-size: xx-large;
+}
