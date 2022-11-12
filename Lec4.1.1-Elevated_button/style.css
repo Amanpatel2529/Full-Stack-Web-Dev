@@ -1,0 +1,23 @@
+.button{
+    margin: 100px;
+    background-color: peru;
+    color: white;
+    font-size: 30pt;
+    padding: 50px;
+    width: 200px;
+    border-radius: 10px;  /*it makes the edges of button rounded*/
+    box-shadow: gray 10px 10px 10px;   /*here first two 10px parameters are x and y axis whereas last 10px is for shadow*/
+    transition: 0.6s;  /*it adds smoothness to the transition when the box moves */
+}
+
+div.button:hover{
+    transform: translate(-10px, -10px);  /*it adds moving motion to our box*/
+    box-shadow: gray 20px 20px 20px;   /*it is added to make it feel like that the box is moving whereas the shadow remains at it's place ; we will make the shadow move double in opposite direction so that the net displacement is 0*/
+    transition: 0.5s;
+}
+
+div.button:active{
+    transform: translate(5px, 5px);  /*it will make the box go back to its original place which clicked*/
+    box-shadow: gray 5px 5px 3px;  /*it will make the shadow go back to its original place which clicked and also shadow blur is decreased*/
+    transition: 0.25s;
+}
