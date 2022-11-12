@@ -1,0 +1,61 @@
+/*The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.*/
+
+/* Rotate */
+.rotate{
+    width: 5cm;
+    margin: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    border: 2px solid black;
+    background-color: lightcoral;
+}
+#one{
+    transform: rotate(90deg);
+    /* transform: rotateX(40deg); */
+    /* transform: rotateY(40deg); */
+}
+
+/* Scale */
+.scale{
+    width: 5cm;
+    margin: 10px;
+    margin-left: 150px;
+    margin-top: 200px;
+    padding: 50px;
+    border: 2px solid black;
+    background-color: lightgreen;
+}
+#two{
+    transform: scale(2)
+}
+
+/* Skew */
+.skew{
+    width: 5cm;
+    margin: 10px;
+    margin-left: 150px;
+    margin-top: 200px;
+    padding: 50px;
+    border: 2px solid black;
+    background-color: lightslategrey;
+    }
+#three{
+    /* transform: skew(35deg); */
+    transform: skewX(30deg);
+    transform: skewY(30deg);
+}
+
+/* Translate */
+.translate{
+    width: 5cm;
+    margin: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    border: 2px solid black;
+    background-color: lightcoral;
+}
+#four{
+    transform: translate(-55px,20px);
+}
