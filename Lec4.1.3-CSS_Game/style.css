@@ -1,0 +1,54 @@
+.game {
+    margin: 50px;
+    background-color: cyan;
+    height: 500px;
+    width: 500px;
+    border: dotted black 2px;
+  }
+  
+  .box {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: solid black 1px;
+  }
+  
+  .player {
+    transform: translateY(
+      225px
+    ); /*makes the player start from middle of box y axis (left)*/
+    background-color: darkblue;
+    animation: move 2s infinite linear; /*animation to make the player move*/
+    animation-play-state: paused; /*it makes the default state of player as paused so it doesn't move automatically*/
+  }
+  
+  .enemy {
+    margin-left: 100px; /*makes the enemy default position as the middle in x axis (top)*/
+    background-color: red;
+    animation: bounce 2s infinite linear; /*animation to make the enemy move perpendicular to the player movement*/
+  }
+  
+  .enemy.one {
+    /*an element with both classes enemy and one*/
+    animation-duration: 3s; /*animation complete duration for first enemy*/
+  }
+  
+  .enemy.two {
+    animation-duration: 2s; /*animation complete duration for second enemy*/
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: translateY(430px); /*animation frame for enemy movement*/
+    }
+  }
+  
+  @keyframes move {
+    50% {
+      transform: translateX(450px) translateY(225px); /*animation frame for player movement*/
+    }
+  }
+  
+  .game:active .player {
+    animation-play-state: running; /*it says that if the game is active i.e. if we click anywhere inside the box and there is a div named player inside the box, then make the animation active state to running ; i.e. if we click inside the box then the player box starts moving*/
+  }
