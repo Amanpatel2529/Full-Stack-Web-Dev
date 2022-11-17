@@ -1,0 +1,46 @@
+.container{
+    margin: 30px;
+    width: 400px;
+    height: 400px;
+    background-color: palevioletred;
+}
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    background-color: darkblue;
+    border: 1px solid black;
+    /*display: inline;*/  /*with display inline we can't give height and width*/ 
+    display: inline-block; /*whereas with display inline-block we can give height and width to it*/
+
+    animation: bounce 2s;  /*in animation attribute we have passed name of annimation used later in keyframes, duration for how much time should it take to complete the animation*/
+    animation-iteration-count: infinite;  /*it will make the animation go on for infinite iterations*/
+}
+
+/*In order to add animations, we can write '@keyframes' and then the name of the animation ; we can add frames to these animations like when 50% of my animation is done, what set of CSS rules do i want to apply ; CSS will automatically add animations b/w these frames*/ 
+@keyframes bounce{
+    0% {
+        background-color: red;           /*We will leave 0% and 100% as empty (in terms of movement) becuase when the animation is 0 or 100 we want it to come back to its original state ; so we will leave it blank but we can change color at 0 and 100%*/
+    }
+
+    50% {
+        transform: translateY(300px);  /*it will make the boxed move down in Y axis 300px*/
+    }
+
+    100% {
+        background-color: seagreen;
+    }
+}
+
+/*animation-timing-function will change the style of movement of boxes but the time taken for all of them to reach back will be same*/
+.one{
+    animation-timing-function: ease-in;  /*it will start slowly whereas ends faster*/
+}
+.two{
+    animation-timing-function: ease-out; /*it will start faster whereas ends slowly*/
+}
+.three{
+    animation-timing-function: linear;   /*it will move at a constant speed*/
+}
+/*for the last box the default func is ease-in-out whixh will start slow and end slow but the in middle speed will be faster*/
+
