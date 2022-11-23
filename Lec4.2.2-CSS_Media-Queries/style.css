@@ -1,0 +1,31 @@
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    background-color: blueviolet;
+
+}
+
+/*Desktop first design*/
+
+@media (max-width: 900px){   /*it says that if i change my browser width to 900px change the background color of box to chartreuse*/
+    .box{
+        background-color: chartreuse;  /*changes the color*/
+    }
+}
+@media (max-width: 400px){   /*the style within media is executed only if the media condition is found to be true*/
+    .box{
+        background-color: darkblue;
+    }
+}
+
+/*Smartphone first design*/
+/* @media (min-width: 400px){
+    background-color: red;
+}
+@media (min-width: 800px){
+    background-color: yellow;
+}
+@media (min-width: 1200px){
+    background-color: purple;
+} */
