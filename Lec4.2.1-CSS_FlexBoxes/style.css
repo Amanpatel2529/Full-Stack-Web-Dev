@@ -1,0 +1,46 @@
+/*The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. */
+
+.container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    background-color: darkcyan;
+    flex-wrap: wrap;   /*by default everything is placed in one block ; flex-wrap "wrap" will wrap the text*/
+    display: inline-flex;   /*If we double the divs the two flex boxes will come one below the other by default but if we do display: inline-flex they will be displayed one after the other*/
+    margin: 50px; 
+
+    justify-content: center;  /*it alligns all the rows to center seperately ; we can also do left or right allignment*/
+    align-items: flex-start;  /*it will align the items vertically ; we can also choose to align towards the end or top ; now as we can see if we choose flex-start all elements even 3 & 5 of second flexbox are alligned to the start as the others*/
+    
+    /* align-content: flex-start;  it will align all the rows together to the start ; by default it is space-around */
+    align-content: space-around;
+    justify-content: space-evenly;  /*it will align the rows with even space between them horizontally*/ 
+
+}
+
+/* Flex Wrap and Directions */
+
+/*flex-wrap: wrap;                  it will wrap the text from top to bottom */
+/*flex-wrap: wrap-reverse;          it will wrap the text from bottom to top */
+/*flex-direction: column;           it changes the direction from row to column that is Second element under the first as in column */
+/*flex-direction: column-reverse;   it changes the direction from row to column but starting from bottom to top that is Second element above the first*/
+/*flex-direction: row;              this is the default flex direction ; i.e. one element just just after the other as in a row*/
+/*flex-direction: row-reverse;      it will wrap text as one element just by the other as in row but starting from right to left*/
+
+
+.item{
+    height: 50px;
+    width: 50px;
+    border: dotted black 2px;
+    margin: 10px;
+    color: white;
+    font-size: 20pt;
+    background-color: tomato;
+
+    text-align: center;  /*it will align the text within a div to the center horizontally ; i.e. numbers within boxes are aligned to the center*/
+    /*there is no particular property in CSS to allign text vertically to center but it can be done using line-height only if the boxes are of equal size*/ 
+}
+
+
+
+
