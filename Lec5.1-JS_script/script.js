@@ -1,0 +1,2 @@
+console.log('Hello')   //console.log is used to print something to the console
+alert('Welcome')       //alert or window.alert is used to send an alert to the user ; dialog box pops us ; if alert is written in head then it stops the execution of further program until the dialog box is closed

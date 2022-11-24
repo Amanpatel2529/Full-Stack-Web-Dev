@@ -1,0 +1,22 @@
+<!--We can add JS to our html page by the following ways: -->
+<!--First: Adding a script block with type=text/javascript in head or body-->
+<!-- <script type="text/javascript"></script> -->
+<!--Second: Create a .js file and link it to page using script tag-->
+<!-- <script src="script.js"></script> -->  <!--if script tag is given src then body of script is not evaluated ; closing tag of script is mandatory in every case-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <script assync defer src="script.js"></script>
+    <!--if we write assync in script tag then the browser will not stop rendering page in order to downlaod script whereas both jobs will be done parallely-->
+    <!--if we write defer in script tag then the browser will not run the script even if it has downloaded until and unless our whole html page is rendered-->  
+
+</head>
+<body>
+    <h1>javascript intro</h1>
+</body>
+</html>
