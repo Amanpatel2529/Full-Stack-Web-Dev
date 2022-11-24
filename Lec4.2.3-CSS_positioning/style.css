@@ -1,0 +1,48 @@
+.container{
+    height: auto;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    font-size: 20pt;
+    color: white;
+    background-color: tomato;
+}
+
+.container.one .item.two{
+    background-color: violet;
+    position: relative;           /*default positioning ; position with respect to original position ; space is reserved for the element if moved*/
+    left: 120px;                   /*it moves away from left i.e. moves to the right 10px from the original position*/
+}
+
+.container.one .item.five{
+    background-color: violet;
+    position: absolute;           /*position with respect to parent ; no space is left, space is aquired by other elements if one element is moved*/
+    left: 120px;
+}
+
+.container.two .item.two{
+    background-color: violet;
+    position: fixed;           /*position fixed with respect to window ; no space is left, space is aquired by other elements if one element is moved*/
+    left: 120px;               /*element is fixed with respect to window therefore if we scroll the screen, element also moves*/
+}
+
+.container .one{
+    position: sticky;         /*the first element of containers move if we scroll and once it reaches 30px from top, it gets stuck there*/
+    top: 30px;
+
+    z-index: 3;               /*z-index is how the element will move. For Example if A and B are two elements with z-index 2 & 3 respectively, then if i scroll A then A will go under B as z-index of A is less than B*/
+}
+
+.container.two .item.six{
+    background-color: teal;
+    position: relative;
+    z-index: 10;             /*here z-index of item six is 10 wheras z index of moving item one is 3, therefore item one will go under item six*/
+
+}
